@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.nav {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item {
+  margin: auto;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 5rem auto;
+}
+
+.listing-container {
+  margin-left: 300px;
+  align-items: center;
+}
+
+#add-btn {
+  background-color: green;
+  margin-top: 15px;
+}
