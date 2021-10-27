@@ -15,7 +15,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 const cookies = cookie.parse(document.cookie);
 
 const Listings = (props) => {
-  console.log("🥗", props.user);
+  console.log("🥗", props);
   console.log("🥗🍪", cookies);
 
   return (
@@ -23,7 +23,9 @@ const Listings = (props) => {
       <h2 style={{ textAlign: "center", fontSize: "50px" }}>
         Local Small Businesses
       </h2>
-      {document.cookie == "loggedIn=true" ? <h4>Welcome</h4> : null}
+      {document.cookie == "loggedIn=true" ? (
+        <h4>Welcome, {props.user}</h4>
+      ) : null}
       <Table>
         <TableHead>
           <TableRow>

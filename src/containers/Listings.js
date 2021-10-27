@@ -5,7 +5,7 @@ import { removeListings } from "../redux/actions";
 const mapStateToProps = (state) => {
   return {
     listings: state.listings,
-    user: state.user,
+    user: state.username,
   };
 };
 

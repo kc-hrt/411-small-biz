@@ -1,8 +1,7 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 
-const api_key = "AIzaSyDbM45cdgy6lhRpVPCOIFymIZN3ZR0CiYg";
-
+const apiKey = process.env.api_key;
 const Map = (props) => {
   const defaultProps = {
     center: {
@@ -15,12 +14,11 @@ const Map = (props) => {
   return (
     <Container>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: api_key }}
+        bootstrapURLKeys={{ key: apiKey }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
-        yesIWantToUseGoogleMapApiInternals
       >
-        <LocationOnIcon lat={props.lat} lng={props.lng} />
+        <AnyReactComponent lat={props.lat} lng={props.lng} />
       </GoogleMapReact>
     </Container>
   );

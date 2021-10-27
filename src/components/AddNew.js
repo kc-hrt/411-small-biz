@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from "react";
 import { Button, TextField, Paper } from "@material-ui/core";
+import uuid from "react-uuid";
 
 // const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 class AddNew extends Component {
   state = {
-    open: false,
     businessName: "",
     businessDescription: "",
     businessHours: "",
@@ -23,8 +23,8 @@ class AddNew extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const payload = { ...this.state };
-    payload.id = this.props.total + 1;
-    delete payload.open;
+    // console.log("🚀🦷", uuid());
+    payload.id = uuid();
     this.props.addListings(payload);
     console.log("🚀", payload);
     this.setState({ open: false });

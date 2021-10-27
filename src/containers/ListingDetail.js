@@ -2,10 +2,10 @@ import { connect } from "react-redux";
 import ListingDetail from "../components/ListingDetail";
 
 const mapStateToProps = (state) => {
-  console.log("🧀", state);
+  console.log("🧀", state.username);
   return {
     listings: state.listings,
-    user: state.user,
+    user: state.username,
   };
 };
 
